@@ -89,7 +89,7 @@ function SignIn() {
               <input
                 name="email"
                 type="email"
-                className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-white"
+                className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-white border border-white"
               />
             </div>
 
@@ -100,7 +100,7 @@ function SignIn() {
               <input
                 name="password"
                 type="password"
-                className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-white "
+                className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-white border border-white"
               />
             </div>
 

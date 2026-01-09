@@ -71,14 +71,14 @@ function SignUp() {
                   name="name"
                   required
                   autoComplete="name"
-                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white"
+                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white  border border-white"
                 />
               </div>
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm/6 font-medium text-gray-500"
+                className="block text-sm/6 font-medium text-gray-500 "
               >
                 Email address
               </label>
@@ -89,7 +89,7 @@ function SignUp() {
                   name="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white"
+                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white  border border-white"
                 />
               </div>
             </div>
@@ -110,7 +110,7 @@ function SignUp() {
                   name="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white"
+                  className="block w-full rounded-md bg-black/5 px-3 py-1.5 text-base  outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6 text-white border border-white"
                 />
               </div>
             </div>
