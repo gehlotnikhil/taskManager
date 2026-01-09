@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./frontend
+    # image: gehlotnikhil38/notemanagement-frontend:latest
+    container_name: "code-frontend"
+    ports:
+      - "80:80"
+    networks:
+      - note-nw
+    environment:
+      - VITE_SERVER_URL=http://backend:8000
+         
+    restart: always
+    
+
+  backend:
+    build: ./backend
+    # image: gehlotnikhil38/notemanagement-backend:latest
+    container_name: "code-backend"
+    ports:
+      - "8000:8000"
+    networks:
+      - note-nw
+    restart: always
+    environment:
+      - FRONTEND_URL=http://frontend/
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://backend:8000/api/auth || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+
+    
+
+networks:
+  note-nw:
