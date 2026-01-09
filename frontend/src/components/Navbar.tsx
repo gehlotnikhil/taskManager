@@ -76,10 +76,7 @@ export default function Navbar() {
                     <Link
                       to="/login"
                       onClick={async () => {
-                        await apiFetch("/api/auth/logout", {
-                          method: "POST",
-                          credentials: "include",
-                        });
+                        localStorage.removeItem("auth_token")
 
                         navigate("/login");
                       }}
