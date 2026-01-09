@@ -10,7 +10,6 @@ import {
 
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "react-router-dom";
-import { apiFetch } from "../api";
 
 const navigation = [
   { name: "Dashboard", href: "/", current: true },
