@@ -16,8 +16,8 @@ export async function login(req,res){
       
       const result  = await authService.loginUser(email,password)
         res.cookie("auth_token", result.token, {
-    httpOnly: true,     
-    secure: false,       
+    httpOnly: false,     
+    secure: true,       
     sameSite: "lax",  
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
@@ -39,8 +39,8 @@ export async function verifycode(req,res){
       const {email,otpCode} = req.body
       const result  =  await authService.verifycode(email,otpCode)
           res.cookie("auth_token", result.token, {
-    httpOnly: true,     
-    secure: false,       
+    httpOnly: false,     
+    secure: true,          
     sameSite: "lax",  
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
@@ -64,8 +64,8 @@ export async function verifytoken(req,res){
 
 export async function logout(req, res) {
   res.clearCookie("auth_token", {
-    httpOnly: true,
-    secure: false, 
+    httpOnly: false,     
+    secure: true,    
     sameSite: "lax",
   });
 
