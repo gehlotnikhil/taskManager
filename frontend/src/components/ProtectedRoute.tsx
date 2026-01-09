@@ -15,7 +15,6 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   useEffect(() => {
     apiFetch("/api/auth/verifytoken", {
       method: "POST",        
-      credentials: "include",
     })
       .then(() => {
         setAuthenticated(true);

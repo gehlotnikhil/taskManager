@@ -47,6 +47,9 @@ function SignIn() {
       if (!success ) {
         throw new Error("Login failed");
       }
+      console.log("Authhhhhhh",response.token)
+      localStorage.setItem("auth_token",response.token);
+      console.log("Authhhhhhh",localStorage.getItem("auth_token"))
       navigate("/");
 
     } catch (err: any) {

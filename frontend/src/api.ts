@@ -5,9 +5,10 @@ export async function apiFetch(
   path: string,
   options: RequestInit = {}
 ): Promise<any> {
+    const token = localStorage.getItem("auth_token");
+
     console.log(`${BASE_URL}${path}`, {
     ...options,
-    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
       ...(options.headers || {}),
@@ -15,9 +16,9 @@ export async function apiFetch(
   })
   const response = await fetch(`${BASE_URL}${path}`, {
     ...options,
-    credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(options.headers || {}),
     },
   });
